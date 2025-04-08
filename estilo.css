@@ -1,0 +1,205 @@
+/* Estils generals */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+  
+  /* Contingut principal */
+  .main-content {
+    padding: 30px; /* Mantén el padding interno */
+    max-width: 1000px; /* Define un ancho máximo */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+  }
+  
+  /* Secció d'introducció */
+  .intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+  }
+  
+  .intro h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .nav-col {
+    display: flex;
+    border-bottom: 2px solid #d66a3d;
+    padding-bottom: 10px;
+    margin: 20px 0;
+    gap: 15px;
+  }
+  
+  .nav-col a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+  }
+  
+  .nav-col a.active {
+    background-color: #f57c00;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  /* Distribució del contingut i la barra lateral */
+  .content-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px; /* Espaciado entre los elementos */
+  }
+  
+  /* Text i seccions de descripció */
+  .mensaje {
+    flex: 2;
+  }
+  
+  .mensaje h3 {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Preus amb imatges de llibres */
+  .precios {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+  }
+  
+  .precios img {
+    width: 150px;
+    height: auto;
+  }
+  /* Secció ebooks */
+  .ebooks {
+    flex: 3;
+  }
+  .ebooks h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f57c00;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  .grid-ebooks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+  }
+  .ebook img {
+    width: 100%;
+    height: auto;
+  }
+  .ebook p {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  /* Barra lateral de top vendes */
+  .sidebar {
+    flex: 1;
+    margin-top: 82px;
+  }
+  
+  .sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sidebar li {
+    background-color: #00796b;
+    color: white;
+    padding: 1rem;
+  }
+  
+  /* Peu de pàgina */
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #999;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media screen and (max-width: 600px) {
+    /* Cambia el menú a columna */
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .menu a {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Acomoda el contenido en columna */
+    .content-area {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    /* Ajusta tamaños de texto para pantallas pequeñas */
+    main p {
+      font-size: 0.9em;
+      text-align: justify;
+    }
+  
+    .mensaje h3 {
+      font-size: 1em;
+    }
+  
+    .ebook p {
+      font-size: 0.85em;
+    }
+  
+    .sidebar li {
+      font-size: 0.9em;
+      padding: 0.9rem;
+    }
+  
+    .logo-bar {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    main h1,
+    .intro h2 {
+      font-size: 1.8em;
+    }
+  
+    .menu a.active {
+      font-weight: bold;
+    }
+  
+    .grid-ebooks {
+      grid-template-columns: 1fr;
+    }
+
+    .precios {
+        flex-direction: row;
+        align-items: center;
+      }
+
+        .grid-ebooks {
+    gap: 15px;
+  }
+  }
